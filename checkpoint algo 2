@@ -1,0 +1,28 @@
+ALGORITHM algorithm_résolution
+VAR
+     T1,T2: ARRAY_OF_Intiger
+    i,j: Intiger:=0;
+    TEST:BOOLEAN;
+    Sum:Intiger:=0;
+BEGIN
+     for i from 0 to T1 lenght -1 step 1 Do
+    TEST:=False;
+    for j from 0 to T2 lenght -1 step 1 Do
+    IF (T1[i]=T2[j]) THEN
+    T2[j]:=0
+    TEST:=True
+    END_IF
+       IF(TEST=True)THEN
+       T1[i]:=0
+       END IF 
+       END for
+       END for
+       FOR i FROM 0 TO T1 LENGHT-1 STEP 1 Do
+       Sum=Sum+T1[i];
+       END FOR
+       FOR j FROM 0 TO T2 LENGHT-1 STEP 1 Do
+       Sum=Sum+T1[j];
+       END FOR
+       Write("la somme des élément est"Sum)
+       END
+END
